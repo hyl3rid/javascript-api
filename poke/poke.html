@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="poke.css" />
+  </head>
+  <body>
+    <aside class="aside">
+      <nav class="navigation">
+        <ul class="navigation__container">
+          <li class="navigation_item">
+            <a class="navigation__link" href="../index.html">Index</a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../giphy/giphy.html">Giphy API</a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../spotify/spotify.html"
+              >Spotify API</a
+            >
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../poke/poke.html">Pokemon API</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="search__container">
+        <h1 class="principal-heading">Search the Pokemon API!</h1>
+        <input type="text" id="search" class="search-container__input" />
+        <button class="search-container__btn">Submit</button>
+        <button class="search-container__btn--catch-em">Catch 'em all</button>
+        <div id="pagination" class="pagination pagination--hide">
+          <div class="pagination__btn-container">
+            <button class="pagination__btn pagination__btn--arrow">
+              &lt;&lt;
+            </button>
+            <button class="pagination__btn pagination__btn--arrow">&lt;</button>
+            <div class="pagination__btn-generator"></div>
+
+            <button class="pagination__btn pagination__btn--arrow">&gt;</button>
+            <button class="pagination__btn pagination__btn--arrow">
+              &gt;&gt;
+            </button>
+          </div>
+        </div>
+      </section>
+      <div id="poke-results" class="search-container__results"></div>
+    </main>
+
+    <script src="poke.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="giphy.css" />
+  </head>
+  <body>
+    <aside class="aside">
+      <nav class="navigation">
+        <ul class="navigation__container">
+          <li class="navigation_item">
+            <a class="navigation__link" href="../index.html">Index</a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../giphy/giphy.html">Giphy API</a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../spotify/spotify.html"
+              >Spotify API</a
+            >
+          </li>
+          <li class="navigation_item">
+            <a class="navigation__link" href="../poke/poke.html">Pokemon API</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <section class="search__container">
+        <h1 class="principal-heading">Search the Giphy API!</h1>
+        <input type="text" id="search" class="search-container__input" />
+        <button class="search-container__btn">Submit</button>
+      </section>
+      <section id="giphy-results" class="giphy-results"></section>
+    </main>
+
+    <script src="giphy.js"></script>
+  </body>
+</html>

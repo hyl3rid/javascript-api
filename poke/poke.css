@@ -1,0 +1,289 @@
+/* CSS RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-text: #0a083a;
+  --color-principal: rgba(147, 197, 114, 1);
+  --color-grey-granite: #6c6b6b;
+  --color-grey-dark: #5a5a5a;
+  --color-grey-background: #e5e5e5;
+  --color-grey-100: #f5f5f5;
+  --color-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Georgia";
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+/* Navigation */
+.aside {
+  min-height: 100vh;
+  min-width: 10vw;
+  background-color: var(--color-grey-dark);
+  display: flex;
+  justify-content: center;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.navigation__container {
+  list-style-type: none;
+}
+
+.navigation_item {
+  display: flex;
+  justify-content: center;
+}
+.navigation_item:first-child {
+  margin-top: 1rem;
+}
+
+.navigation__link {
+  color: var(--color-white);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  border-bottom: 2px solid var(--color-grey-granite);
+  transition: all 0.2s;
+}
+
+.navigation__link:hover {
+  color: #93c572;
+  border-bottom: 2px solid #93c572;
+}
+
+/* TYPOGRAPHY */
+.principal-heading {
+  margin: 2rem 5rem;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  display: flex;
+}
+
+/* SEARCH CONTAINER */
+
+.search__container {
+  margin: 2rem 5rem;
+  height: 20rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container__input {
+  border: 2px solid rgba(175, 175, 175, 1);
+  width: 40rem;
+  padding: 1.2rem 0;
+  background-color: var(--color-white);
+  padding-left: 2rem;
+  transition: border 0.1s;
+  border-radius: 3px;
+  margin-bottom: 3rem;
+}
+
+.search-container__input[type="text"] {
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+
+.search-container__input[type="text"]:hover,
+.search-container__input[type="text"]:focus {
+  border: 2px solid var(--color-principal);
+}
+.search-container__input:focus-visible {
+  outline: none;
+  border: 2px solid var(--color-principal);
+}
+
+.search-container__results {
+  margin-top: 1rem;
+  margin-bottom: 9rem;
+
+  grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
+}
+
+.search-container__btn {
+  width: 19rem;
+  padding: 1rem 2rem;
+  font-size: inherit;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(147, 197, 114, 0.9);
+  color: #fff;
+  transition: all 0.3s;
+  margin: 0 auto;
+  box-shadow: 0 0.2rem 0.7rem var(--color-principal);
+}
+
+.search-container__btn:hover {
+  width: 19rem;
+  padding: 1rem 2rem;
+  font-size: inherit;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--color-principal);
+  color: #fff;
+  margin: 0 auto;
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem var(--color-principal);
+}
+
+.search-container__btn:active {
+  background-color: rgba(147, 197, 114, 0.9);
+  transform: translateY(0);
+  box-shadow: 0 0 0;
+}
+
+.search-container__btn--catch-em {
+  font-family: "Lobster";
+  width: 19rem;
+  padding: 1rem 2rem;
+  font-size: 1.9rem;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(147, 197, 114, 0.9);
+  color: #fff;
+  transition: all 0.3s;
+  margin: 0 auto;
+  margin-top: 3rem;
+  box-shadow: 0 0.2rem 0.7rem var(--color-principal);
+}
+
+.search-container__btn--catch-em:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem var(--color-principal);
+}
+
+.search-container__btn--catch-em:active {
+  background-color: rgba(147, 197, 114, 0.9);
+  transform: translateY(0);
+  box-shadow: 0 0 0;
+}
+
+/* POKEMON ALL RESULTS */
+.search-container__results {
+  margin-top: 4rem;
+  margin-right: 4rem;
+  display: grid;
+}
+
+.search-container__results--all {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.poke-results-all__container {
+  height: 100%;
+  width: 100%;
+  max-height: 30rem;
+  border-radius: 3px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 3rem;
+}
+
+.poke-results-all__container:hover {
+  box-shadow: 0 1rem 3rem var(--color-principal);
+}
+
+.poke-results__img {
+  height: 35rem;
+  width: 35rem;
+}
+
+.poke-results-all__img {
+  height: 100%;
+  width: 100%;
+  max-height: 20rem;
+}
+
+.poke-results__name {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* POKEMONE FETCH SINGLE */
+.poke-results__container {
+  display: flex;
+}
+
+.poke-results__text-container {
+  margin-left: 2rem;
+}
+.poke-results__text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+.poke-results__title-item {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.poke-results__list-item {
+  list-style-type: none;
+}
+
+/* PAGINATION */
+
+.pagination--hide {
+  display: none;
+}
+
+.pagination__btn-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__btn {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-principal);
+  border: none;
+  color: var(--color-white);
+  border-radius: 3px;
+  box-shadow: 0 0.2rem 0.7rem var(--color-principal);
+}
+
+.pagination__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem var(--color-principal);
+}
+
+.pagination__btn:active {
+  background-color: rgba(147, 197, 114, 0.9);
+  transform: translateY(0);
+  box-shadow: 0 0 0;
+}
+
+.pagination__btn-generator {
+  display: flex;
+}
+.pagination__btn--numbered {
+  width: 5rem;
+}
